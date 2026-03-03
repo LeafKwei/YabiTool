@@ -1,0 +1,56 @@
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0100 1000‬   ; src_imm=72='H'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 0101‬   ; src_imm=101='e'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 1100‬   ; src_imm=108='l'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 1100‬   ; src_imm=108='l'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 1111‬   ; src_imm=111='o'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0010 0000‬   ; src_imm=32=' '
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0101 0111‬   ; src_imm=87='W'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 1111‬   ; src_imm=111='o'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0111 0010‬   ; src_imm=114='r'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 1100‬   ; src_imm=108='l'
+0000 0001   ; dst_imm=1
+
+10 000011   ; out
+00 000 000  ; opsize=1 src_addrmod=imm dst_addrmod=imm
+‭0110 0100‬   ; src_imm=100='d'
+0000 0001   ; dst_imm=1
+
+00 000000   ; shut
