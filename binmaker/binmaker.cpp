@@ -1,12 +1,30 @@
 #include <iostream>
 #include <fstream>
 
+#define IDX_BEG (7)
+
 int bytes = 0;
 int drops = 0;
+char data = 0;
+int idx = IDX_BEG;
 
-void write(int c, std::ofstream &ofs){
-	bytes++;
-	ofs.write((const char*)(&c), sizeof(char));
+void show_bit(char c){
+	std::cout << "<<bits>>: ";
+	for(int i = 7; i >= 0; i--){
+		std::cout << std::dec << static_cast<int>((c >> i) & 1);
+	}
+	std::cout << std::endl;
+}
+
+void write(char c, std::ofstream &ofs){
+	data |= (c << idx);
+	idx--;
+	if(idx == -1){
+		ofs.write((const char*)(&data), sizeof(char));
+		bytes++;
+		data = 0;
+		idx = IDX_BEG;
+	}
 }
 
 void compile_char(char c, std::ofstream &ofs){
@@ -61,6 +79,10 @@ int main(int argc, char *argv[]){
 	
 	ifs.close();
 	ofs.close();
+	
+	if(idx != IDX_BEG){
+		std::cout << "Warning! Incomplete byte at tail of " << argv[1] << std::endl;
+	}
 	
 	std::cout << "Compile " << bytes << " bytes, " << "Drop " << drops << " bytes" << std::endl;
 }
